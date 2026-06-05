@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellar AMP | Digital Marketing Agency in Amalapuram, Konaseema</title><meta name="description" content="Stellar AMP is a digital marketing agency in Amalapuram, Konaseema offering social media, Meta &amp; Google ads, design, reels and Google Business Profile setup.">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body><style>
+header.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden}
+.hero-glow-bg{position:absolute;top:-10%;right:-5%;width:800px;height:800px;background:radial-gradient(circle,rgba(245,200,66,0.07),transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(245,200,66,0.4);background:rgba(245,200,66,0.06);color:var(--gold);padding:7px 16px;border-radius:30px;font-size:.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:28px;opacity:0;animation:fadeUp .7s .1s forwards}
+.hero-badge .bdot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero h1{font-family:var(--display);font-size:clamp(3rem,6vw,5.6rem);font-weight:700;line-height:1.02;letter-spacing:1px;margin-bottom:24px;color:var(--white);opacity:0;animation:fadeUp .7s .2s forwards}
+.hero h1 .gold{color:var(--gold);display:block}
+.hero .lead{font-size:1.18rem;color:var(--text);max-width:520px;margin-bottom:36px;font-weight:300;opacity:0;animation:fadeUp .7s .35s forwards}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .5s forwards}
+.hero-visual{display:flex;justify-content:center;opacity:0;animation:fadeIn 1s .6s forwards}
+.hero-visual .star-wrap{width:420px;height:420px}
+.hero-visual .star-glow{width:420px;height:420px}
+.hero-visual .star-svg{width:340px;height:340px;animation:starspin 50s linear infinite}
+.stats{display:flex;gap:50px;margin-top:54px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .65s forwards}
+.stat .num{font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--gold)}
+.stat .lbl{font-size:.82rem;color:var(--blue-sub)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:linear-gradient(160deg,var(--navy2),rgba(13,31,60,0.4));border:1px solid rgba(143,168,204,0.1);border-radius:20px;padding:36px 30px;transition:.3s;position:relative;overflow:hidden;display:block;color:inherit}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.3s}
+.svc-card:hover{transform:translateY(-6px);border-color:rgba(245,200,66,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-icon{width:56px;height:56px;border-radius:14px;background:rgba(245,200,66,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.svc-card h3{font-family:var(--display);font-size:1.5rem;font-weight:600;margin-bottom:12px;color:var(--white)}
+.svc-card p{color:var(--text-soft);font-size:.95rem;font-weight:300;margin-bottom:14px}
+.svc-link{color:var(--gold);font-size:.88rem;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.svc-link svg{width:15px;height:15px}
+.why-band{background:linear-gradient(180deg,transparent,rgba(13,31,60,0.5),transparent)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-list{display:flex;flex-direction:column;gap:26px;margin-top:36px}
+.why-item{display:flex;gap:18px}
+.why-check{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:rgba(245,200,66,0.12);display:flex;align-items:center;justify-content:center;margin-top:3px}
+.why-item h4{font-size:1.15rem;font-weight:600;margin-bottom:5px;color:var(--white)}
+.why-item p{color:var(--text-soft);font-size:.95rem;font-weight:300}
+.why-stats{background:linear-gradient(150deg,var(--navy3),var(--navy2));border-radius:24px;padding:46px;border:1px solid rgba(245,200,66,0.12)}
+.why-stat-row{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid rgba(245,200,66,0.1)}
+.why-stat-row:last-child{border-bottom:none}
+.why-stat-row .big{font-family:var(--display);font-size:2.6rem;font-weight:700;color:var(--gold)}
+.why-stat-row .desc{text-align:right;color:var(--text-soft);font-size:.9rem;max-width:200px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{text-align:center}
+.step-num{font-family:var(--display);font-size:3.6rem;font-weight:700;color:rgba(245,200,66,0.25);line-height:1}
+.step h4{font-size:1.15rem;font-weight:600;margin:8px 0;color:var(--white)}
+.step p{color:var(--text-soft);font-size:.9rem;font-weight:300}
+.cta-band{background:linear-gradient(135deg,var(--navy3),var(--navy2));border-radius:30px;padding:70px 50px;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(245,200,66,0.15)}
+.cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.cta-band h2{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;margin-bottom:16px;color:var(--white)}
+.cta-band p{color:var(--text);font-size:1.1rem;margin-bottom:34px;font-weight:300}
+.cta-band .hero-cta{justify-content:center}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}
+  .hero-visual{order:-1}.hero-visual .star-wrap,.hero-visual .star-glow{width:300px;height:300px}.hero-visual .star-svg{width:240px;height:240px}
+  .hero-badge,.hero-cta,.stats{justify-content:center}.hero .lead{margin:0 auto 36px}
+  .services-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr;gap:40px}
+  .steps{grid-template-columns:1fr 1fr;gap:30px}.stats{gap:28px}
+}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.stats{flex-direction:column;gap:18px}.cta-band{padding:50px 26px}}
+</style><nav><div class="nav-inner">
+<a href="index.html" class="logo"><div class="star-wrap"><div class="star-glow"></div><svg class="star-svg" viewBox="0 0 200 200"><defs><radialGradient id="gf" cx="50%" cy="42%" r="60%"><stop offset="0%" stop-color="#FFE08A"/><stop offset="55%" stop-color="#F5C842"/><stop offset="100%" stop-color="#E8B42E"/></radialGradient></defs><circle cx="100" cy="100" r="96" fill="#16315c"/><polygon points="100.0,12.0 114.2,65.8 162.2,37.8 134.2,85.8 188.0,100.0 134.2,114.2 162.2,162.2 114.2,134.2 100.0,188.0 85.8,134.2 37.8,162.2 65.8,114.2 12.0,100.0 65.8,85.8 37.8,37.8 85.8,65.8" fill="url(#gf)"/><circle cx="100" cy="100" r="20" fill="#0d2142"/><circle cx="100" cy="100" r="10" fill="url(#gf)"/></svg></div><span class="logo-text">STELLAR<span class="amp-line">A M P</span></span></a>
+<div class="nav-links" id="navLinks">
+<a href="index.html" class="active">Home</a>
+<div class="dropdown"><a href="services.html">Services <span class="caret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<div class="dropdown-menu">
+<a href="services/social-media.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>Social Media Management</a>
+<a href="services/ads.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>Meta &amp; Google Ads</a>
+<a href="services/design.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.1 0-.9.8-1.7 1.7-1.7H16a5 5 0 005-5c0-3.9-4-7.3-9-7.3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11" r="1" fill="currentColor" stroke="none"/></svg></span>Graphic Designing</a>
+<a href="services/video.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="14" height="14" rx="3"/><path d="M16.5 9.5l5-2.5v10l-5-2.5"/></svg></span>Reels &amp; Video Editing</a>
+<a href="services/google-business.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 1114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Google Business Profile</a>
+<a href="services/web.html"><span class="dm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>Websites &amp; Branding</a>
+</div></div>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="https://wa.me/918790575336" class="nav-cta" target="_blank">Get Started</a>
+</div>
+<button class="burger" id="burger"><span></span><span></span><span></span></button>
+</div></nav>
+<header class="hero">
+<div class="hero-glow-bg"></div>
+<div class="deco-circle" style="width:600px;height:600px;top:-150px;right:-150px"></div>
+<div class="deco-circle" style="width:820px;height:820px;top:-260px;right:-260px"></div>
+<div class="wrap"><div class="hero-grid">
+<div class="hero">
+<span class="hero-badge"><span class="bdot"></span> Amalapuram's Digital Growth Partner</span>
+<h1>We Amplify<span class="gold">Local Businesses</span></h1>
+<p class="lead">Stellar AMP is a full-service digital marketing agency helping businesses, shops, clinics and institutions in Amalapuram &amp; Konaseema grow online — with stunning content, smart ads, and real results.</p>
+<div class="hero-cta">
+<a href="https://wa.me/918790575336" class="btn btn-gold" target="_blank"><span class="bic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9 9 0 01-3.8-.8L3 21l1.9-5.2A8.4 8.4 0 1121 11.5z"/></svg></span> Start Growing</a>
+<a href="services.html" class="btn btn-ghost">Explore Services</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="num">100%</div><div class="lbl">Local Focus</div></div>
+<div class="stat"><div class="num">6+</div><div class="lbl">Core Services</div></div>
+<div class="stat"><div class="num">24/7</div><div class="lbl">Support</div></div>
+</div></div>
+<div class="hero-visual"><div class="star-wrap"><div class="star-glow"></div><svg class="star-svg" viewBox="0 0 200 200"><defs><radialGradient id="gf" cx="50%" cy="42%" r="60%"><stop offset="0%" stop-color="#FFE08A"/><stop offset="55%" stop-color="#F5C842"/><stop offset="100%" stop-color="#E8B42E"/></radialGradient></defs><circle cx="100" cy="100" r="96" fill="#16315c"/><polygon points="100.0,12.0 114.2,65.8 162.2,37.8 134.2,85.8 188.0,100.0 134.2,114.2 162.2,162.2 114.2,134.2 100.0,188.0 85.8,134.2 37.8,162.2 65.8,114.2 12.0,100.0 65.8,85.8 37.8,37.8 85.8,65.8" fill="url(#gf)"/><circle cx="100" cy="100" r="20" fill="#0d2142"/><circle cx="100" cy="100" r="10" fill="url(#gf)"/></svg></div></div>
+</div></div></header>
+
+<section id="services"><div class="wrap">
+<div class="sec-head center reveal"><span class="sec-tag">What We Do</span>
+<h2 class="sec-title">Services that grow your business</h2>
+<p class="sec-desc">Everything your local business needs to stand out, get found, and win more customers online.</p></div>
+<div class="services-grid"><a href="services/social-media.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div><h3>Social Media Management</h3><p>Eye-catching posts, reels &amp; stories that build your brand and engage your audience.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="services/ads.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div><h3>Meta &amp; Google Ads</h3><p>Targeted ad campaigns that reach the right customers and deliver real ROI.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="services/design.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.1 0-.9.8-1.7 1.7-1.7H16a5 5 0 005-5c0-3.9-4-7.3-9-7.3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11" r="1" fill="currentColor" stroke="none"/></svg></div><h3>Graphic Designing</h3><p>Professional flyers, banners, logos and creatives that make your brand premium.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="services/video.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="14" height="14" rx="3"/><path d="M16.5 9.5l5-2.5v10l-5-2.5"/></svg></div><h3>Reels &amp; Video Editing</h3><p>Scroll-stopping reels and promo videos that get your business noticed.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="services/google-business.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 1114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Google Business Profile</h3><p>Get found on Google Maps &amp; Search so local customers find you first.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="services/web.html" class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></div><h3>Websites &amp; Branding</h3><p>Clean, modern websites and brand identity that build instant trust.</p><span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+</div>
+</div></section>
+
+<section class="why-band"><div class="wrap"><div class="why-grid">
+<div class="reveal"><span class="sec-tag">Why Stellar AMP</span>
+<h2 class="sec-title">Local roots.<br>Stellar results.</h2>
+<div class="why-list">
+<div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>We understand Konaseema</h4><p>We're local. We know your market, your customers, and what works in Amalapuram.</p></div></div>
+<div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Affordable for everyone</h4><p>Premium digital marketing priced right for small and growing organisations.</p></div></div>
+<div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>One team, every service</h4><p>Design, ads, social media, video — all under one roof. No juggling vendors.</p></div></div>
+<div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Real communication</h4><p>Quick WhatsApp replies, clear updates, and honest results you can measure.</p></div></div>
+</div></div>
+<div class="why-stats reveal">
+<div class="why-stat-row"><div class="big">100%</div><div class="desc">Focused on local Amalapuram &amp; Konaseema businesses</div></div>
+<div class="why-stat-row"><div class="big">6+</div><div class="desc">Complete digital services under one roof</div></div>
+<div class="why-stat-row"><div class="big">24/7</div><div class="desc">Always reachable on WhatsApp for our clients</div></div>
+</div></div></div></section>
+
+<section id="process"><div class="wrap">
+<div class="sec-head center reveal"><span class="sec-tag">How We Work</span>
+<h2 class="sec-title">Simple. Transparent. Effective.</h2></div>
+<div class="steps">
+<div class="step reveal"><div class="step-num">01</div><h4>Connect</h4><p>Message us on WhatsApp. Tell us about your business and goals.</p></div>
+<div class="step reveal"><div class="step-num">02</div><h4>Strategy</h4><p>We build a custom plan tailored to your business and budget.</p></div>
+<div class="step reveal"><div class="step-num">03</div><h4>Create</h4><p>We design, post, and run campaigns that get you noticed.</p></div>
+<div class="step reveal"><div class="step-num">04</div><h4>Grow</h4><p>You get more reach, leads and customers. We optimise and scale.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="cta-band reveal">
+<h2>Ready to grow your business?</h2>
+<p>Let's make your brand impossible to ignore. Get a free consultation today.</p>
+<div class="hero-cta">
+<a href="https://wa.me/918790575336" class="btn btn-gold" target="_blank"><span class="bic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9 9 0 01-3.8-.8L3 21l1.9-5.2A8.4 8.4 0 1121 11.5z"/></svg></span> Message Us on WhatsApp</a>
+<a href="tel:+918790575336" class="btn btn-ghost"><span class="bic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.4 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg></span> Call Now</a>
+</div></div></div></section>
+<footer><div class="wrap">
+<div class="footer-logo"><div class="star-wrap"><div class="star-glow"></div><svg class="star-svg" viewBox="0 0 200 200"><defs><radialGradient id="gf" cx="50%" cy="42%" r="60%"><stop offset="0%" stop-color="#FFE08A"/><stop offset="55%" stop-color="#F5C842"/><stop offset="100%" stop-color="#E8B42E"/></radialGradient></defs><circle cx="100" cy="100" r="96" fill="#16315c"/><polygon points="100.0,12.0 114.2,65.8 162.2,37.8 134.2,85.8 188.0,100.0 134.2,114.2 162.2,162.2 114.2,134.2 100.0,188.0 85.8,134.2 37.8,162.2 65.8,114.2 12.0,100.0 65.8,85.8 37.8,37.8 85.8,65.8" fill="url(#gf)"/><circle cx="100" cy="100" r="20" fill="#0d2142"/><circle cx="100" cy="100" r="10" fill="url(#gf)"/></svg></div><div class="footer-name">STELLAR <span>AMP</span></div></div>
+<div class="tag">Amplifying Local Businesses to Stellar Heights</div>
+<div class="footer-social">
+<a href="https://www.instagram.com/stellar_amp" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.62c-3.14 0-3.51.01-4.75.07-1.15.05-1.77.24-2.18.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.18-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.05 1.15.24 1.77.4 2.18.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.18.4 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c1.15-.05 1.77-.24 2.18-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.18.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-1.15-.24-1.77-.4-2.18a3.6 3.6 0 00-.88-1.35 3.6 3.6 0 00-1.35-.88c-.41-.16-1.03-.35-2.18-.4-1.24-.06-1.61-.07-4.75-.07zM12 6.87A5.13 5.13 0 1017.13 12 5.13 5.13 0 0012 6.87zm0 8.46A3.33 3.33 0 1115.33 12 3.33 3.33 0 0112 15.33zm5.34-9.69a1.2 1.2 0 101.2 1.2 1.2 1.2 0 00-1.2-1.2z"/></svg></a>
+<a href="https://wa.me/918790575336" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg></a>
+<a href="mailto:hello.stellaramp@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></a>
+<a href="tel:+918790575336" aria-label="Phone"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02z"/></svg></a>
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a><a href="services.html">Services</a>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+<div class="footer-copy">Amalapuram, Konaseema &nbsp;•&nbsp; © 2026 Stellar AMP. All rights reserved.</div>
+</div></footer>
+<a href="https://wa.me/918790575336" class="wa-float" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg></a>
+<script src="script.js"></script></body></html>
